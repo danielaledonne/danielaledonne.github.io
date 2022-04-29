@@ -1,0 +1,12 @@
+.blog-title {
+    color: #e15379;
+}
+
+.blog-description {
+    color: #e15379;
+}
+
+.post-holder.odd {
+    background: #e15379;
+    color: white;
+}
