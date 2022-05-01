@@ -5,20 +5,22 @@ header_menu: true
 ---
 
 Offro sessioni di **consulenza individuale, familiare e di coppia** per affrontare le più comuni problematiche legate all'individuo ed alla famiglia.
-Ambiti di intervento: 
-- Ansia
-- Attacchi di Panico
-- Depressione e Disturbi dell'Umore
-- Disturbi Alimentari
-- Disturbi del Comportamento e dell’Attenzione
-- Fobie
-
 
 ---
 ##### Consulenza Individuale
 
 Spesso ci troviamo a vivere momenti di difficoltà e di stress emotivo legati ad un particolare periodo della nostra vita, che incidono sul benessere psicologico.
-Tramite la terapia acquisirai consapevolezza dei tuoi vissuti e delle risorse attraverso cui superare le difficoltà e migliorare la qualità della tua vita
+Tramite la terapia acquisirai consapevolezza dei tuoi vissuti e delle risorse attraverso cui superare le difficoltà e migliorare la qualità di vita.
+
+Insieme affronteremo:
+- ansia
+- attacchi di Panico
+- depressione e Disturbi dell'Umore
+- disturbi Alimentari
+- disturbi del Comportamento e dell’Attenzione
+- fobie
+
+![Individual Therapy](images/individual-therapy-02.jpg)
 
 ---
 
@@ -27,17 +29,27 @@ Tramite la terapia acquisirai consapevolezza dei tuoi vissuti e delle risorse at
 Ogni cambiamento all'interno della famiglia può alterarne gli equilibri. Se non affrontati correttamente questi cambiamenti possono generare sofferenza per tutti o alcuni membri.
 Attraverso la terapia analizzeremo le dinamiche familiari e le conseguenze che queste hanno sul benessere di ciascun componente.
 
+Tipici ambiti di intervento:
+- gestione della fase adolescenziale 
+- riadattamento di fronte ai cambiamenti o ad eventi critici
+- relazione con i figli in seguito alla separazione
+
+![Family Therapy](images/family-therapy-02.jpg)
+
 ---
 
-##### Problematiche di Coppia
+##### Consulenza di Coppia
 
-Tutte le coppie possono incontrare difficoltà e si possono generare tensioni che non sempre si riescono a superare autonomamente. 
-Il mio obiettivo è aiutarvi a trovare un nuovo equilibrio che vi consenta di raggiungere il benessere sia individuale che di coppia.
+Tutte le coppie possono incontrare difficoltà e si possono generare tensioni difficili da superare autonomamente. 
+Il mio obiettivo è aiutarvi a trovare un nuovo equilibrio che vi consenta di raggiungere il benessere individuale e di coppia.
+
+Ecco alcuni ambiti di intervento tipici:
+- gestione della separazione
+- difficoltà di comunicazione 
+- problematiche nella sfera sessuale
+- sostegno alle genitorialità
+
+
+![Couples Therapy](images/couples-therapy-01.jpg)
 
 ---
-
-##### Difficoltà legate alla Separazione
-
-Accettare la separazione e le conseguenze che ne derivano è un processo complesso che può portare paure ed incertezze sul futuro.
-La terapia può aiutare a prendere consapevolezza di ciò che non ha funzionato nel rapporto e delle responsabilità individuali dei coniugi. Tramite sessioni dedicate sarete in grado di elaborare i vostri sentimenti, accettare più serenamente la separazione e programmare le prossime tappe.
-
