@@ -20,7 +20,7 @@ Insieme affronteremo:
 - disturbi del Comportamento e dell’Attenzione
 - fobie
 
-![Individual Therapy](images/individual-therapy-02.jpg)
+![Individual Therapy](images/individual-therapy.jpg)
 
 ---
 
@@ -34,7 +34,7 @@ Tipici ambiti di intervento:
 - riadattamento di fronte ai cambiamenti o ad eventi critici
 - relazione con i figli in seguito alla separazione
 
-![Family Therapy](images/family-therapy-02.jpg)
+![Family Therapy](images/family-therapy.jpg)
 
 ---
 
@@ -50,6 +50,6 @@ Ecco alcuni ambiti di intervento tipici:
 - sostegno alle genitorialità
 
 
-![Couples Therapy](images/couples-therapy-01.jpg)
+![Couples Therapy](images/couples-therapy.jpg)
 
 ---
