@@ -16,7 +16,7 @@ Insieme affronteremo:
 - ansia
 - attacchi di Panico
 - depressione e disturbi dell'umore
-- disturbi Alimentari
+- disturbi alimentari
 - disturbi del comportamento e dell’attenzione
 - fobie
 
