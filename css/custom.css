@@ -1,12 +1,21 @@
 .blog-title {
-    color: #e15379;
+    /* color: #22343a; */
+    color: 
+    /* text-shadow: 0px 0px 2px rgba(255,255,255,1); */
+
 }
 
 .blog-description {
-    color: #e15379;
+    color: #22343a;
 }
 
 .post-holder.odd {
     background: #e15379;
     color: white;
 }
+
+a.btn.site-menu{
+    background: #e15379;
+}
+
+/* 9fd067 */
