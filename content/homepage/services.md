@@ -15,9 +15,9 @@ Tramite la terapia acquisirai consapevolezza dei tuoi vissuti e delle risorse at
 Insieme affronteremo:
 - ansia
 - attacchi di Panico
-- depressione e Disturbi dell'Umore
+- depressione e disturbi dell'umore
 - disturbi Alimentari
-- disturbi del Comportamento e dell’Attenzione
+- disturbi del comportamento e dell’attenzione
 - fobie
 
 ![Individual Therapy](images/individual-therapy.jpg)
