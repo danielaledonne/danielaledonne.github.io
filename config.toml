@@ -7,7 +7,7 @@ defaultContentLanguage = "it"
 theme = "hugo-scroll"
 
 # The "title" of your website
-title = "Daniela Ledonne - Psicologa Clinica"
+title = "Daniela Ledonne - Psicologa a Roma"
 
 [params]
     # A "copyright"-line to be added at the bottom of the page.
@@ -15,7 +15,7 @@ title = "Daniela Ledonne - Psicologa Clinica"
     copyright = "Daniela Ledonne - P.IVA 16699611006 - Iscr. Ordine Psicologi Basilicata n. 879"
 
     # The "description" of your website. This is used in the meta data of your generated html.
-    description = "Psicologa Clinica"
+    description = "Sito personale della dott.ssa Daniela Ledonne, psicologa clinica a Roma, specializzanda in Psicoterapia Familiare."
 
     # The path to your "favicon". This should be a square (at least 32px x 32px) png-file.
     favicon = "images/favicon.png"
@@ -29,7 +29,7 @@ title = "Daniela Ledonne - Psicologa Clinica"
     # Another "title" :-). This one is used as the site_name on the Hugo's internal
     # opengraph structured data template.
     # See https://ogp.me/ and https://gohugo.io/templates/internal#open-graph.
-    title = "Daniela Ledonne - Psicologa"
+    title = "Daniela Ledonne - Psicologa a Roma"
 
     # This theme will, by default, inject a design-by-line at the bottom of the page.
     # You can turn it off, but we would really appreciate if you don’t :-)
