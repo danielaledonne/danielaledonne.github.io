@@ -6,9 +6,9 @@ header_menu: true
 
 Per qualsiasi informazione, scrivimi senza impegno:
 
--- {{<icon class="fa fa-whatsapp" aria-hidden="true">}} [WhatsApp](https://wa.me/491111555555?text=Ciao,%20avrei%20bisogno%20di%20informazioni)
+-- {{<icon class="fa fa-whatsapp" aria-hidden="true">}} [WhatsApp](https://wa.me/393517193288)
 
--- {{<icon class="fa fa-phone" aria-hidden="true">}} [+49 1111 555555](tel:+491111555555)
+-- {{<icon class="fa fa-phone" aria-hidden="true">}} [+39 351 7193288](tel:+393517193288)
 
 -- {{<icon class="fa fa-envelope">}}&nbsp;[info@danielaledonne.it](mailto:info@danielaledonne.it) 
 
