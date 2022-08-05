@@ -14,7 +14,7 @@ Tramite la terapia acquisirai consapevolezza dei tuoi vissuti e delle risorse at
 
 Insieme affronteremo:
 - ansia
-- attacchi di Panico
+- attacchi di panico
 - depressione e disturbi dell'umore
 - disturbi alimentari
 - disturbi del comportamento e dell’attenzione
