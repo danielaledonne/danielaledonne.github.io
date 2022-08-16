@@ -7,7 +7,7 @@ header_menu: false
 Seguimi per novità ed aggiornamenti:
 
 
--- {{<icon class="fa fa-instagram" aria-hidden="true">}} [Instagram](https://www.instagram.com/daniela.ledonne/)
+-- {{<icon class="fa fa-instagram" aria-hidden="true">}} [Instagram](https://www.instagram.com/daniela_ledonne_psicologa/)
 
 
 -- {{<icon class="fa fa-facebook" aria-hidden="true">}} [Facebook](https://www.facebook.com/psicodanielaledonne/)
