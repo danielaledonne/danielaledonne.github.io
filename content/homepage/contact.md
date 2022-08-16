@@ -13,5 +13,3 @@ Per qualsiasi informazione, scrivimi senza impegno:
 -- {{<icon class="fa fa-telegram" aria-hidden="true">}} [Telegram](https://t.me/dottssadanielaledonne)
 
 -- {{<icon class="fa fa-envelope">}}&nbsp;[info@danielaledonne.it](mailto:info@danielaledonne.it) 
-
--- {{<icon class="fa fa-linkedin">}}&nbsp;[LinkedIn](https://www.linkedin.com/in/danielaledonne/) 
