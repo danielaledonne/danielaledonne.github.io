@@ -4,7 +4,7 @@ weight: 4
 header_menu: false
 ---
 
-Seguimi per informazioni, novità ed aggiornamenti:
+Seguimi per novità ed aggiornamenti:
 
 
 -- {{<icon class="fafa-instagram" aria-hidden="true">}} [Instagram](https://www.instagram.com/daniela.ledonne/)
