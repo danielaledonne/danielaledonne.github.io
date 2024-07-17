@@ -29,3 +29,4 @@ Temporary Items
 
 # Hugo
 *.lock
+public/*
