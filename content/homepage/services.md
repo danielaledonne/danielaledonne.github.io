@@ -4,10 +4,10 @@ weight: 4
 header_menu: true
 ---
 
-Offro sessioni di **consulenza individuale, familiare e di coppia** per affrontare le più comuni problematiche legate all'individuo ed alla famiglia.
+Offro sessioni di **terapia individuale, familiare e di coppia** per affrontare le più comuni problematiche legate all'individuo ed alla famiglia.
 
 ---
-##### Consulenza Individuale
+##### Terapia Individuale
 
 Spesso ci troviamo a vivere momenti di difficoltà e di stress emotivo legati ad un particolare periodo della nostra vita, che incidono sul benessere psicologico.
 Tramite la terapia acquisirai consapevolezza dei tuoi vissuti e delle risorse attraverso cui superare le difficoltà e migliorare la qualità di vita.
@@ -38,7 +38,7 @@ Tipici ambiti di intervento:
 
 ---
 
-##### Consulenza di Coppia
+##### Terapia di Coppia
 
 Tutte le coppie possono incontrare difficoltà e si possono generare tensioni difficili da superare autonomamente. 
 Il mio obiettivo è aiutarvi a trovare un nuovo equilibrio che vi consenta di raggiungere il benessere individuale e di coppia.
