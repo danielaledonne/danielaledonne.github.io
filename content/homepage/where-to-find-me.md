@@ -7,7 +7,9 @@ header_menu: true
 
 Ricevo sia di persona, a Roma, che online:
 
--- {{<icon class="fa fa-map" aria-hidden="true">}} [Via Val d'Ossola, 00141, Roma](https://maps.app.goo.gl/1RvHmtrfPJhpqB2c6)
+-- {{<icon class="fa fa-map" aria-hidden="true">}} [Via Anapo 26, 00141, Roma (Quartiere Trieste)](https://maps.app.goo.gl/5nfEAAfugLYWdv1n9)
+
+-- {{<icon class="fa fa-map" aria-hidden="true">}} [Via Val d'Ossola, 00141, Roma (Monte Sacro)](https://maps.app.goo.gl/1RvHmtrfPJhpqB2c6)
 
 -- {{<icon class="fa fa-globe" aria-hidden="true">}} [guidapsicologi.it](https://www.guidapsicologi.it/studio/dottssa-daniela-ledonne)
 
