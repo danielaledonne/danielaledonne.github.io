@@ -75,3 +75,117 @@ a.btn.site-menu{
     height: 26px;
   }
 }
+
+/* ==========================================================================
+   Contact Grid & Monochromatic Cards (Stile minimale, pulito)
+   ========================================================================== */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+  margin: 28px 0 16px 0;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 18px;
+  background: #ffffff;
+  color: #22343a !important;
+  border-radius: 12px;
+  border: 1px solid rgba(34, 52, 58, 0.12);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  text-decoration: none !important;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+}
+
+.contact-card:hover {
+  transform: translateY(-2px);
+  border-color: #22343a;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.09);
+  background: #ffffff;
+  color: #22343a !important;
+}
+
+.contact-card .card-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: #f2f4f7;
+  color: #22343a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.contact-card:hover .card-icon {
+  background: #22343a;
+  color: #ffffff;
+}
+
+.contact-card .card-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  min-width: 0;
+}
+
+.contact-card .card-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #22343a;
+  line-height: 1.25;
+}
+
+.contact-card .card-subtitle {
+  font-size: 13px;
+  font-weight: 400;
+  color: #556268;
+  margin-top: 3px;
+  line-height: 1.25;
+}
+
+/* ==========================================================================
+   Social Pills (Monocromatico minimale)
+   ========================================================================== */
+
+.social-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 28px 0 16px 0;
+}
+
+.social-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 22px;
+  background: #ffffff;
+  color: #22343a !important;
+  border-radius: 50px;
+  border: 1px solid rgba(34, 52, 58, 0.12);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: all 0.22s ease;
+}
+
+.social-pill:hover {
+  transform: translateY(-2px);
+  border-color: #22343a;
+  background: #22343a;
+  color: #ffffff !important;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.social-pill i {
+  font-size: 16px;
+}

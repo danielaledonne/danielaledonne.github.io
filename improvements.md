@@ -144,14 +144,11 @@ Per uno psicologo con studio a Roma, i dati strutturati sono fondamentali per co
   - Sostituire il fucsia/rosa con una tonalità più satura o profonda (es. bordeaux scuro/marsala `#9e1b43` o verde salvia/ottanio elegante) che garantisca un contrasto superiore a 5:1.
   - Sostituire il verde lime dell'hover con un colore coordinato e leggibile.
 
-### 5.2 Formattazione dei Canali di Contatto
-- **Situazione attuale:** I canali di contatto in `contact.md`, `where-to-find-me.md` e `follow.md` usano la sintassi:
-  `-- {{<icon class="fa fa-whatsapp">}} [WhatsApp](url)`
-  generando trattini tipografici separati (`– `).
-- **Miglioria proposta:** Trasformare i recapiti in "Contact Cards" o pulsanti a forma di pillola con icone colorate coerenti, spaziatura generosa (minimo 48px di altezza per il touch mobile) e feedback visivo all'hover/tap.
+### 5.2 Formattazione dei Canali di Contatto (✅ Implementato)
+- Recapiti e canali esterni trasformati in eleganti **Contact Cards** e **Social Pills** monocromatiche con icone semplici e minimaliste, garantendo touch target ampio (>48px) e transizioni morbide all'hover.
 
-### 5.3 Link Esterni Sicuri
-- Aggiungere `target="_blank" rel="noopener noreferrer"` ai link verso servizi terzi (Google Maps, UnoBravo, GuidaPsicologi, Instagram, Facebook, LinkedIn), in modo che l'utente non abbandoni il sito ufficiale ma apra il servizio in una nuova scheda.
+### 5.3 Link Esterni Sicuri (✅ Implementato)
+- Aggiunti `target="_blank" rel="noopener noreferrer"` a tutti i link verso servizi terzi (Google Maps, UnoBravo, GuidaPsicologi, Instagram, Facebook, LinkedIn, WhatsApp, Telegram).
 
 ### 5.4 Gerarchia Titoli e Layout Schede
 - In `services.md`, sostituire i titoli `#####` (`<h5>`) con `###` (`<h3>`) per mantenere una corretta gerarchia semantica dopo il titolo di sezione `<h2>`.
@@ -172,6 +169,6 @@ Per uno psicologo con studio a Roma, i dati strutturati sono fondamentali per co
 | **2** | **Performance** | Convertire e comprimere le immagini in formato WebP (-85% peso) | 🔴 Alto | Da fare |
 | **3** | **Accessibilità** | Correggere contrasti cromatici (`#e15379`, hover link) e inserire `lang="it"` | 🔴 Alto | 🟡 In corso (`lang="it"` ✅) |
 | **4** | **SEO Locale** | Inserire Schema.org JSON-LD per `MedicalBusiness` / `Psychologist` con le 2 sedi | 🔴 Alto | ✅ **Completato** |
-| **5** | **UI / Mobile** | Introdurre pulsante flottante WhatsApp e stilizzare i canali di contatto in card | 🟡 Medio | 🟡 In corso (WhatsApp ✅) |
+| **5** | **UI / Mobile** | Introdurre pulsante flottante WhatsApp e stilizzare i canali di contatto in card | 🟡 Medio | ✅ **Completato** |
 | **6** | **Legale / GDPR** | Predisporre Privacy Policy e adeguare il tracciamento di Google Analytics | 🟡 Medio | Da fare |
 | **7** | **SEO** | Abilitare `robots.txt`, tag `canonical` e gerarchia corretta dei titoli (`h3`) | 🟢 Basso | 🟡 In corso (`robots.txt` + `canonical` ✅) |

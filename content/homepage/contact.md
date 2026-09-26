@@ -8,10 +8,36 @@ Il primo colloquio è uno spazio senza impegno, in cui ti ascolto e capiamo insi
 
 Se senti che potresti aver bisogno di un supporto, scrivimi — anche solo per fare una domanda:
 
--- {{<icon class="fa fa-phone" aria-hidden="true">}} [+39 351 7193288](tel:+393517193288)
+<div class="contact-grid">
+  <a href="https://wa.me/393517193288" class="contact-card" target="_blank" rel="noopener noreferrer">
+    <div class="card-icon"><i class="fa fa-whatsapp" aria-hidden="true"></i></div>
+    <div class="card-info">
+      <span class="card-title">WhatsApp</span>
+      <span class="card-subtitle">Scrivimi un messaggio</span>
+    </div>
+  </a>
 
--- {{<icon class="fa fa-whatsapp" aria-hidden="true">}} [WhatsApp](https://wa.me/393517193288)
+  <a href="tel:+393517193288" class="contact-card">
+    <div class="card-icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+    <div class="card-info">
+      <span class="card-title">+39 351 7193288</span>
+      <span class="card-subtitle">Chiamata diretta</span>
+    </div>
+  </a>
 
--- {{<icon class="fa fa-telegram" aria-hidden="true">}} [Telegram](https://t.me/dottssadanielaledonne)
+  <a href="https://t.me/dottssadanielaledonne" class="contact-card" target="_blank" rel="noopener noreferrer">
+    <div class="card-icon"><i class="fa fa-telegram" aria-hidden="true"></i></div>
+    <div class="card-info">
+      <span class="card-title">Telegram</span>
+      <span class="card-subtitle">@dottssadanielaledonne</span>
+    </div>
+  </a>
 
--- {{<icon class="fa fa-envelope">}}&nbsp;[info@danielaledonne.it](mailto:info@danielaledonne.it) 
+  <a href="mailto:info@danielaledonne.it" class="contact-card">
+    <div class="card-icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+    <div class="card-info">
+      <span class="card-title">info@danielaledonne.it</span>
+      <span class="card-subtitle">Scrivimi una email</span>
+    </div>
+  </a>
+</div> 

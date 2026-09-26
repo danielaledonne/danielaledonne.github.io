@@ -7,6 +7,11 @@ enableRobotsTXT = true
 defaultContentLanguage = "it"
 theme = "hugo-scroll"
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 # The "title" of your website
 title = "Daniela Ledonne - Psicologa Psicoterapeuta a Roma"
 
