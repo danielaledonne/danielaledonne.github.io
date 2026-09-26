@@ -16,6 +16,33 @@
     border-top-color: #db3360 !important;
 }
 
+/* Triangolino di separazione sezioni sempre visibile (anti-lag sullo scroll) */
+.post-after {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transition: none !important;
+    transform: translateZ(0) !important;
+    will-change: transform !important;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.post.last + .post-after,
+.post-holder:last-of-type .post-after {
+    display: none !important;
+}
+
+.post-holder:nth-of-type(odd) .post-after {
+    right: 6%;
+    left: auto;
+}
+
+.post-holder:nth-of-type(even) .post-after {
+    left: 6%;
+    right: auto;
+}
+
 a.btn.site-menu {
     background: #db3360;
     color: #ffffff;

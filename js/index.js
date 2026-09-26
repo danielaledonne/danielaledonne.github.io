@@ -83,28 +83,22 @@ var $sitehead = $("#site-head");
         $post.each(function () {
           if (($(window).height() + w) > ($(document).height() - $(".site-footer").height())) {
             var l = $postholder.length;
-            $(".fn-item[item_index='" + (l - 1) + "']").removeClass("active")
-            $(".fn-item[item_index='" + (l) + "']").addClass("active")
+            $(".fn-item[item_index='" + (l - 1) + "']").removeClass("active");
+            $(".fn-item[item_index='" + (l) + "']").addClass("active");
           } else {
             var f = $(this).offset().top;
             var b = $(this).offset().top + $(this).height();
             var t = $(this).parent(".post-holder").index();
             var i = $(".fn-item[item_index='" + t + "']");
-            var a = $(this)
-              .parent(".post-holder")
-              .prev(".post-holder")
-              .find(".post-after");
 
             $(this).attr("item_index", t);
 
             if (w >= f && w <= b) {
               i.addClass("active");
-              a.fadeOut("slow");
             } else {
               i.removeClass("active");
-              a.fadeIn("slow");
             }
-        }
+          }
         });
       });
     }
