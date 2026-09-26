@@ -69,9 +69,9 @@ Le priorità attuali si concentrano su:
 
 ### 3.2 UX e Ottimizzazione Conversioni
 
-#### Finding 3: Gerarchia visiva dei pulsanti nell'Hero Header
-* **Situazione:** I 4 pulsanti nella schermata iniziale (*Chi sono*, *Come posso aiutarti*, *Dove mi trovi*, *Contattami*) hanno tutti la stessa identica forma e colore.
-* **Miglioria proposta:** Introdurre una **Call to Action (CTA) primaria in risalto** (es. *"Richiedi un primo colloquio"* o *"Contattami"* con pulsante pieno scuro o con icona WhatsApp/Telefono), trasformando gli altri pulsanti in navigazione secondaria (stile outline o più discreto).
+#### Finding 3: Gerarchia visiva dei pulsanti nell'Hero Header (✅ Risolto by-design)
+- La funzione di Call to Action primaria di conversione è svolta in modo pervasivo ed efficace dal **pulsante flottante WhatsApp** (sempre visibile a schermo sia su desktop che su mobile, ad alto contrasto con icona e testo dedicato).
+- I 4 pulsanti dell'Hero Header (*Chi sono*, *Come posso aiutarti*, *Dove mi trovi*, *Contattami*) fungono correttamente da **menu di navigazione rapida** (ancore di scorrimento) con pari dignità tra le sezioni del sito.
 
 #### Finding 4: Foto profilo terapeuta (`daniela_cropped_image.webp`) (✅ Implementato)
 - Convertita la foto profilo in formato **WebP ad alta qualità** (`11 KB` invece di 67 KB, **-83.5%**).
@@ -97,9 +97,10 @@ Le priorità attuali si concentrano su:
 
 ### 3.4 Privacy, Cookie e Conformità GDPR
 
-#### Finding 7: Tracciamento Google Analytics non conforme
-* **Situazione:** [`layouts/partials/analytics-gtag.html`](layouts/partials/analytics-gtag.html) carica Google Analytics 4 (`G-DLHYE5GV19`) all'apertura della pagina senza mascheramento dell'indirizzo IP né consenso preventivo.
-* **Miglioria proposta:** Abilitare `'anonymize_ip': true` nella configurazione gtag e predisporre una gestione semplificata del consenso se si utilizzano cookie analytics non aggregati.
+#### Finding 7: Tracciamento Google Analytics non conforme (✅ Implementato)
+- Aggiornata la configurazione di Google Analytics 4 in [`layouts/partials/analytics-gtag.html`](layouts/partials/analytics-gtag.html).
+- Abilitato esplicitamente **`'anonymize_ip': true`** per il mascheramento preventivo degli indirizzi IP dei visitatori.
+- Disabilitati i segnali pubblicitari e di profilazione di terze parti (**`'allow_google_signals': false`**, **`'allow_ad_personalization_signals': false`**) per limitare l'uso di GA4 a finalità meramente statistiche e aggregate nel pieno rispetto del GDPR.
 
 #### Finding 8: Assenza di Privacy & Cookie Policy nel footer
 * **Situazione:** Nel footer ([`layouts/partials/footer.html`](layouts/partials/footer.html)) sono presenti solo i dati fiscali (P.IVA e numero iscrizione all'Ordine), ma manca il link all'Informativa sul Trattamento dei Dati Personali (GDPR).
@@ -112,7 +113,7 @@ Le priorità attuali si concentrano su:
 | Priorità | Ambito | Descrizione Intervento | Impatto | Stato |
 | :---: | :--- | :--- | :---: | :---: |
 | **1** | **Accessibilità (WCAG)** | Correggere il contrasto dello sfondo rosa (`#db3360`, 4.51:1) ed eliminare l'hover verde lime | 🔴 Alto | ✅ **Completato** |
-| **2** | **UX / Conversioni** | Evidenziare la Call to Action primaria nell'Hero Header (*Richiedi un primo colloquio*) | 🔴 Alto | Da fare |
+| **2** | **UX / Conversioni** | Gerarchia CTA Hero Header vs navigazione interna | 🔴 Alto | ✅ **Risolto by-design (CTA WhatsApp)** |
 | **3** | **Legale / GDPR** | Inserire Privacy & Cookie Policy nel footer e anonimizzare IP di Google Analytics | 🟡 Medio | Da fare |
 | **4** | **Performance (CWV)** | Aggiungere `loading="lazy"` e dimensioni esplicite `width`/`height` sulle immagini dei servizi | 🟡 Medio | ✅ **Completato** |
 | **5** | **Performance** | Ottimizzare la foto profilo in WebP e aggiungere `font-display: swap` sui web font | 🟢 Basso | ✅ **Completato** |
