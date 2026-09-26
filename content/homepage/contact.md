@@ -1,8 +1,7 @@
 ---
 title: "Contattami"
-weight: 3
+weight: 4
 header_menu: true
-
 ---
 
 Il primo colloquio è uno spazio senza impegno, in cui ti ascolto e capiamo insieme se posso esserti utile. Non devi sapere già cosa dire o come spiegare quello che senti — basta iniziare.
