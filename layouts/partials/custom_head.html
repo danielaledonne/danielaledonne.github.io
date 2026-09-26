@@ -66,6 +66,56 @@
 />
 
 
+<!-- Canonical URL -->
+<link rel="canonical" href="{{ .Permalink }}" />
+
+<!-- Schema.org JSON-LD Structured Data for Local Business / Physician -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Physician",
+  "name": "Dott.ssa Daniela Ledonne - Psicologa Psicoterapeuta",
+  "medicalSpecialty": "Psychotherapy",
+  "description": "Psicologa Clinica e Psicoterapeuta ad orientamento Sistemico-Relazionale a Roma. Terapia individuale, di coppia e familiare.",
+  "url": "https://danielaledonne.it/",
+  "telephone": "+393517193288",
+  "email": "info@danielaledonne.it",
+  "image": "https://danielaledonne.it/images/daniela_cropped_image.png",
+  "priceRange": "$$",
+  "location": [
+    {
+      "@type": "MedicalClinic",
+      "name": "Studio di Psicoterapia - Quartiere Trieste",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Via Anapo 26",
+        "addressLocality": "Roma",
+        "postalCode": "00199",
+        "addressCountry": "IT"
+      }
+    },
+    {
+      "@type": "MedicalClinic",
+      "name": "Studio di Psicoterapia - Monte Sacro",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Via Val d'Ossola",
+        "addressLocality": "Roma",
+        "postalCode": "00141",
+        "addressCountry": "IT"
+      }
+    }
+  ],
+  "sameAs": [
+    "https://www.guidapsicologi.it/studio/dottssa-daniela-ledonne",
+    "https://www.unobravo.com/psicologi/daniela-ledonne",
+    "https://www.instagram.com/daniela_ledonne_psicologa/",
+    "https://www.facebook.com/psicodanielaledonne/",
+    "https://www.linkedin.com/in/danielaledonne/"
+  ]
+}
+</script>
+
 <!-- Google Analytics tag-->
 {{ if .Site.Params.GoogleAnalyticsID }}
 {{ partial "analytics-gtag.html" . }}
