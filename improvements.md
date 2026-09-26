@@ -88,9 +88,10 @@ Le priorità attuali si concentrano su:
 - Definite dimensioni native esplicite `width="1200" height="800"` con classe `.service-img` (`aspect-ratio: 3 / 2`, `height: auto`, angoli arrotondati a 12px e ombra leggera), azzerando completamente il *Cumulative Layout Shift* (CLS).
 - Inseriti attributi `alt` descrittivi ricchi di parole chiave per la SEO locale.
 
-#### Finding 6: Ottimizzazione Font Google e `font-display: swap`
-* **Situazione:** I font del tema sono dichiarati in `fonts.css`.
-* **Miglioria proposta:** Verificare l'inclusione della direttiva `font-display: swap` per evitare il blocco del rendering del testo durante il download dei caratteri (FOIT - Flash of Invisible Text).
+#### Finding 6: Ottimizzazione Font Google e `font-display: swap` (✅ Implementato)
+- Creato l'override pulito `static/css/fonts.css` nel repository del sito (preservando il submodule del tema intatto).
+- Aggiunta la direttiva `font-display: swap;` a tutte le 20 dichiarazioni `@font-face` dei font locali del sito (Open Sans, Open Sans Condensed, Oswald, Roboto Slab).
+- Eliminato il rischio di blocco del rendering del testo (*FOIT - Flash of Invisible Text*) all'avvio della pagina, migliorando il First Contentful Paint (FCP) e la reattività percepita.
 
 ---
 
@@ -114,4 +115,4 @@ Le priorità attuali si concentrano su:
 | **2** | **UX / Conversioni** | Evidenziare la Call to Action primaria nell'Hero Header (*Richiedi un primo colloquio*) | 🔴 Alto | Da fare |
 | **3** | **Legale / GDPR** | Inserire Privacy & Cookie Policy nel footer e anonimizzare IP di Google Analytics | 🟡 Medio | Da fare |
 | **4** | **Performance (CWV)** | Aggiungere `loading="lazy"` e dimensioni esplicite `width`/`height` sulle immagini dei servizi | 🟡 Medio | ✅ **Completato** |
-| **5** | **Performance** | Ottimizzare la foto profilo `daniela_cropped_image` in WebP con `font-display: swap` | 🟢 Basso | 🟡 In corso (Foto profilo WebP ✅) |
+| **5** | **Performance** | Ottimizzare la foto profilo in WebP e aggiungere `font-display: swap` sui web font | 🟢 Basso | ✅ **Completato** |
