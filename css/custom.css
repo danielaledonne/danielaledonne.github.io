@@ -57,11 +57,11 @@ a.btn:hover {
 
 /* Menu laterale a comparsa / Scroll Menu */
 .fn-item.active {
-    color: #db3360 !important;
+    color: #b6b84c !important;
 }
 
 .fn-item:hover {
-    color: #b52048 !important;
+    color: #ced067 !important;
 }
 
 /* Link di testo nei contenuti */
