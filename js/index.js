@@ -130,3 +130,37 @@ var $sitehead = $("#site-head");
     }
   });
 })(jQuery);
+
+// Tracciamento Conversioni e Click di Contatto (Google Analytics 4)
+document.addEventListener('click', function (e) {
+  var link = e.target.closest('a');
+  if (!link || !link.href) return;
+
+  var href = link.href;
+  var eventName = null;
+  var channel = null;
+  var placement = link.classList.contains('whatsapp-float') ? 'floating_button' : 'contact_section';
+
+  if (href.indexOf('wa.me') !== -1) {
+    eventName = 'whatsapp_click';
+    channel = 'whatsapp';
+  } else if (href.indexOf('tel:') === 0) {
+    eventName = 'phone_click';
+    channel = 'phone';
+  } else if (href.indexOf('mailto:') === 0) {
+    eventName = 'email_click';
+    channel = 'email';
+  } else if (href.indexOf('t.me') !== -1) {
+    eventName = 'telegram_click';
+    channel = 'telegram';
+  }
+
+  if (eventName && typeof window.gtag === 'function') {
+    window.gtag('event', eventName, {
+      'event_category': 'Contact',
+      'channel': channel,
+      'placement': placement,
+      'link_url': href
+    });
+  }
+});
