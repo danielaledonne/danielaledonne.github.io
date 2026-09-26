@@ -150,8 +150,8 @@ Per uno psicologo con studio a Roma, i dati strutturati sono fondamentali per co
 ### 5.3 Link Esterni Sicuri (✅ Implementato)
 - Aggiunti `target="_blank" rel="noopener noreferrer"` a tutti i link verso servizi terzi (Google Maps, UnoBravo, GuidaPsicologi, Instagram, Facebook, LinkedIn, WhatsApp, Telegram).
 
-### 5.4 Gerarchia Titoli e Layout Schede
-- In `services.md`, sostituire i titoli `#####` (`<h5>`) con `###` (`<h3>`) per mantenere una corretta gerarchia semantica dopo il titolo di sezione `<h2>`.
+### 5.4 Gerarchia Titoli (✅ Implementato) e Layout Schede
+- In `services.md`, sostituiti i titoli `#####` (`<h5>`) con `###` (`<h3>`) per mantenere una corretta gerarchia semantica dopo il titolo di sezione `<h2>`.
 - Presentare i tre servizi (Individuale, Familiare, Coppia) con card stilizzate, angoli arrotondati e immagini coordinate, anziché come un lungo blocco di testo continuo.
 
 ---
@@ -171,4 +171,4 @@ Per uno psicologo con studio a Roma, i dati strutturati sono fondamentali per co
 | **4** | **SEO Locale** | Inserire Schema.org JSON-LD per `MedicalBusiness` / `Psychologist` con le 2 sedi | 🔴 Alto | ✅ **Completato** |
 | **5** | **UI / Mobile** | Introdurre pulsante flottante WhatsApp e stilizzare i canali di contatto in card | 🟡 Medio | ✅ **Completato** |
 | **6** | **Legale / GDPR** | Predisporre Privacy Policy e adeguare il tracciamento di Google Analytics | 🟡 Medio | Da fare |
-| **7** | **SEO** | Abilitare `robots.txt`, tag `canonical` e gerarchia corretta dei titoli (`h3`) | 🟢 Basso | 🟡 In corso (`robots.txt` + `canonical` ✅) |
+| **7** | **SEO** | Abilitare `robots.txt`, tag `canonical` e gerarchia corretta dei titoli (`h3`) | 🟢 Basso | ✅ **Completato** |
