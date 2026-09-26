@@ -5,7 +5,7 @@ header_menu: true
 ---
 
 
-![Daniela Ledonne](images/daniela_cropped_image.png)
+<img src="images/daniela_cropped_image.webp" alt="Dott.ssa Daniela Ledonne - Psicologa Psicoterapeuta a Roma" class="profile-pic" width="170" height="170" loading="lazy" decoding="async">
 
 Ciao, sono Daniela, Psicologa Clinica specializzata in Psicoterapia Familiare con orientamento sistemico-relazionale: un modo di lavorare che non guarda la persona in isolamento, ma dentro il contesto di vita, le relazioni significative e le storie familiari che ci portiamo dentro.
 

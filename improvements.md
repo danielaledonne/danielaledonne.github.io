@@ -1,176 +1,118 @@
-# Analisi del Sito e Piano di Migliorie Suggerite
+# Analisi del Sito e Piano di Migliorie Tecniche
 **Sito web:** [danielaledonne.it](https://danielaledonne.it/)  
 **Professionista:** Dott.ssa Daniela Ledonne – Psicologa Psicoterapeuta (Roma)  
-**Data analisi:** Settembre 2026  
+**Data ultimo aggiornamento:** Settembre 2026  
 
 ---
 
 ## Indice
-1. [Sintesi Generale](#1-sintesi-generale)
-2. [Architettura delle Informazioni e Funnel UX](#2-architettura-delle-informazioni-e-funnel-ux)
-3. [Prestazioni e Core Web Vitals (CWV)](#3-prestazioni-e-core-web-vitals-cwv)
-4. [SEO Locale e Posizionamento su Google (Roma)](#4-seo-locale-e-posizionamento-su-google-roma)
-5. [UI, Design e Accessibilità (A11y - WCAG AA)](#5-ui-design-e-accessibilità-a11y---wcag-aa)
-6. [Privacy, Cookie e GDPR](#6-privacy-cookie-e-gdpr)
-7. [Tabella di Prioritizzazione degli Interventi](#7-tabella-di-prioritizzazione-degli-interventi)
+1. [Sintesi dello Stato Attuale](#1-sintesi-dello-stato-attuale)
+2. [Interventi Completati (Changelog)](#2-interventi-completati-changelog)
+3. [Nuovi Findings e Aree di Miglioramento](#3-nuovi-findings-e-aree-di-miglioramento)
+   - [3.1 UI, Design e Accessibilità (WCAG AA)](#31-ui-design-e-accessibilità-wcag-aa)
+   - [3.2 UX e Ottimizzazione Conversioni](#32-ux-e-ottimizzazione-conversioni)
+   - [3.3 Prestazioni e Core Web Vitals (CWV)](#33-prestazioni-e-core-web-vitals-cwv)
+   - [3.4 Privacy, Cookie e Conformità GDPR](#34-privacy-cookie-e-conformità-gdpr)
+4. [Tabella di Prioritizzazione Aggiornata](#4-tabella-di-prioritizzazione-aggiornata)
 
 ---
 
-## 1. Sintesi Generale
+## 1. Sintesi dello Stato Attuale
 
-Il sito presenta un'ottima impronta: è minimale, chiaro, veloce da navigare ed empatico nella comunicazione. La specializzazione in psicoterapia sistemico-relazionale e l'approccio orientato alla relazione emergono chiaramente.
+Il sito ha compiuto importanti passi avanti in termini di identità visiva, prestazioni e SEO locale:
+- **Identità fotografica personalizzata:** Tutte le immagini dei servizi terapeutici ritraggono ora sessioni realistiche e coordinate in uno studio romano luminoso, con la terapeuta in primo piano di spalle e focus empatico sui pazienti.
+- **Peso delle immagini ridotto del 91.4%:** Payload complessivo delle immagini ridotto da oltre 3.2 MB a 274 KB tramite conversione in WebP ad alta fedeltà.
+- **Canali di contatto professionali:** Sostituiti i semplici link testuali con Contact Cards e Social Pills monocromatiche, touch-friendly (>48px) e sicure (`target="_blank"`).
+- **SEO Locale & Dati Strutturati:** Pienamente integrati Schema.org JSON-LD con le 2 sedi di Roma (Trieste e Monte Sacro), `robots.txt` e tag `canonical`.
 
-Tuttavia, l'analisi tecnica ha evidenziato diverse aree di miglioramento che possono aumentare significativamente:
-- **Tasso di contatto (conversioni):** facilitando la richiesta di primo colloquio da smartphone e desktop.
-- **Visibilità su Google a Roma (SEO Locale):** tramite dati strutturati per studi medici/psicologici con due sedi.
-- **Velocità di caricamento su reti mobili:** riducendo il peso delle immagini di oltre l'85%.
-- **Accessibilità visiva:** risolvendo criticità di contrasto cromatico su testi e link.
-- **Conformità legale (GDPR):** adeguando il tracciamento di Google Analytics e le informative.
-
----
-
-## 2. Architettura delle Informazioni e Funnel UX
-
-### 2.1 Riordino logico delle sezioni (✅ Implementato)
-- **Nuovo ordine applicato nei file Markdown:**
-  1. **Chi sono** (`weight: 1`) – Presentazione ed approccio sistemico-relazionale.
-  2. **Come posso aiutarti** (`weight: 2`) – Servizi offerti (terapia individuale, familiare, di coppia) e disturbi trattati.
-  3. **Dove mi trovi** (`weight: 3`) – Studi a Roma (Trieste, Monte Sacro) e sedute online.
-  4. **Contattami** (`weight: 4`) – Modalità di primo contatto rassicuranti (telefono, WhatsApp, Telegram, email).
-  5. **Seguimi** (`weight: 5`) – Profili social divulgativi.
-
-### 2.2 Call to Action (CTA) principale nell'Hero Header
-- **Situazione attuale:** I pulsanti dell'header sono tutti visivamente identici (`Chi sono`, `Come posso aiutarti`, `Dove mi trovi`, `Contattami`).
-- **Miglioria proposta:** Introdurre un pulsante primario in evidenza con un'azione chiara (es. *"Richiedi un primo colloquio"* o *"Scrivimi su WhatsApp"*), mantenendo gli altri con stile secondario per la navigazione interna.
-
-### 2.3 Floating Action Button per Mobile (WhatsApp / Telefono) (✅ Implementato)
-- **Implementazione completata:**
-  - Creato [`layouts/partials/custom_body.html`](layouts/partials/custom_body.html) con pulsante flottante WhatsApp (link diretto a `https://wa.me/393517193288` con messaggio introduttivo preimpostato, icona vettoriale SVG accessibile).
-  - Stili dedicati aggiunti in [`static/css/custom.css`](static/css/custom.css): badge pillola su desktop con scritta *"Scrivimi su WhatsApp"*, collassamento automatico su schermi mobile (<=600px) in comodo pulsante circolare FAB touch-friendly in basso a destra.
+Le priorità attuali si concentrano su:
+1. **Accessibilità visiva (Contrasti cromatici a norma WCAG AA).**
+2. **Call-to-Action principale nell'Hero Header.**
+3. **Lazy-loading e attributi dimensionali anti-CLS.**
+4. **Adeguamento Privacy / GDPR per Google Analytics.**
 
 ---
 
-## 3. Prestazioni e Core Web Vitals (CWV)
+## 2. Interventi Completati (Changelog)
 
-### 3.1 Peso e formato delle immagini (~3.2 MB totali)
-Attualmente la sola pagina iniziale carica oltre 3.2 MB di immagini in formato JPEG non compresso ad altissima risoluzione:
-- `cover-image.jpg`: **1.5 MB** (2048×1365 px)
-- `couples-therapy.jpg`: **692 KB** (900×600 px)
-- `family-therapy.jpg`: **642 KB** (900×600 px)
-- `individual-therapy.jpg`: **356 KB** (900×601 px)
-
-**Miglioria proposta:**
-1. Convertire tutte le immagini in formato moderno **WebP** o **AVIF** con compressione bilanciata:
-   - `cover-image.webp`: **40 KB** invece di 1.5 MB (-97.3%) — ✅ **Completato**
-   - `individual-therapy.webp`: **96 KB** invece di 356 KB (nuova composizione personalizzata) — ✅ **Completato**
-   - `family-therapy.webp`: **64 KB** invece di 642 KB (-90%, nuova composizione personalizzata) — ✅ **Completato**
-   - `couples-therapy.webp`: **74 KB** invece di 692 KB (-89.3%, nuova composizione personalizzata) — ✅ **Completato**
-   - **Peso totale delle 4 immagini principali:** ridotto da **3.19 MB** a **274 KB** (**-91.4% complessivo**!).
-2. Aggiungere gli attributi `loading="lazy"` e `decoding="async"` a tutte le immagini sotto la piega iniziale (servizi e foto profilo).
-3. Specificare `width` e `height` su ogni tag `<img>` per azzerare il *Cumulative Layout Shift* (CLS).
-
-### 3.2 Pulizia e modernizzazione Script e Font
-- **jQuery 1.11.3 (2015):** Il tema include una versione obsoleta di jQuery per gestire lo scorrimento e l'evidenziazione del menu. È possibile alleggerirla o sostituirla con JavaScript nativo moderno (`scroll-behavior: smooth`, `IntersectionObserver`).
-- **Font Face non utilizzati:** [`themes/hugo-scroll/static/css/fonts.css`](file:///Users/maurizio/Projects/danielaledonne.github.io/themes/hugo-scroll/static/css/fonts.css) dichiara formati legacy (`.eot`, `.ttf`, `.svg`) per 4 famiglie distinte. Conviene mantenere esclusivamente i pesi utilizzati in formato compresso `.woff2` con direttiva `font-display: swap`.
+- [x] **Riordino delle Sezioni UX:** *Chi sono* $\rightarrow$ *Come posso aiutarti* $\rightarrow$ *Dove mi trovi* $\rightarrow$ *Contattami* $\rightarrow$ *Seguimi*.
+- [x] **Floating Action Button WhatsApp:** Pulsante flottante sempre accessibile su desktop e mobile per avviare una chat diretta.
+- [x] **SEO Locale (Schema.org JSON-LD):** Dati strutturati `Physician` e `MedicalClinic` con entrambe le sedi (Via Anapo, Via Val d'Ossola), specialità, telefono, email e profili social.
+- [x] **SEO Tecnica & Indicizzazione:**
+  - Abilitato `robots.txt` con inclusione esplicita di `sitemap.xml`.
+  - Inserito il tag `<link rel="canonical" href="{{ .Permalink }}" />`.
+  - Configurato `defaultContentLanguage = "it"` per generare `<html lang="it">`.
+- [x] **Contact Cards & Social Pills:** Nuovi recapiti monocromatici per WhatsApp, Telefono, Telegram, Email, Maps, GuidaPsicologi, UnoBravo, Instagram, Facebook e LinkedIn.
+- [x] **Gerarchia Intestazioni:** Titoli dei servizi in `services.md` corretti da `<h5>` a `<h3>` con stili tipografici dedicati (`.post-content h3`).
+- [x] **Conversione Immagini in WebP:**
+  - `cover-image.webp`: **40 KB** (era 1.5 MB, -97.3%)
+  - `individual-therapy.webp`: **96 KB** (era 356 KB, nuova foto personalizzata con paziente giovane)
+  - `family-therapy.webp`: **57 KB** (era 642 KB, nuova foto personalizzata con camicia chiusa e figlio al centro)
+  - `couples-therapy.webp`: **74 KB** (era 692 KB, nuova foto personalizzata con dialogo espressivo e camicia chiusa)
+  - `daniela_cropped_image.webp`: **11 KB** (era 67 KB, -83.5%, foto profilo ottimizzata con cornice e ombra morbida)
 
 ---
 
-## 4. SEO Locale e Posizionamento su Google (Roma)
+## 3. Nuovi Findings e Aree di Miglioramento
 
-### 4.1 Dati Strutturati Schema.org (JSON-LD) (✅ Implementato)
-Per uno psicologo con studio a Roma, i dati strutturati sono fondamentali per comparire nel Google Knowledge Panel e nei risultati locali (Google Maps / Local Pack).
+### 3.1 UI, Design e Accessibilità (WCAG AA)
 
-**Implementazione completata:** Inserito in `layouts/partials/custom_head.html` un blocco JSON-LD completo con le due sedi (Trieste e Monte Sacro), i contatti, le specialità e i link social:
-```json
-{
-  "@context": "https://schema.org",
-  "@type": "Physician",
-  "name": "Dott.ssa Daniela Ledonne - Psicologa Psicoterapeuta",
-  "medicalSpecialty": "Psychotherapy",
-  "description": "Psicologa Clinica e Psicoterapeuta ad orientamento Sistemico-Relazionale a Roma. Terapia individuale, di coppia e familiare.",
-  "url": "https://danielaledonne.it/",
-  "telephone": "+393517193288",
-  "email": "info@danielaledonne.it",
-  "image": "https://danielaledonne.it/images/daniela_cropped_image.png",
-  "priceRange": "$$",
-  "location": [
-    {
-      "@type": "MedicalClinic",
-      "name": "Studio di Psicoterapia - Quartiere Trieste",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Via Anapo 26",
-        "addressLocality": "Roma",
-        "postalCode": "00199",
-        "addressCountry": "IT"
-      }
-    },
-    {
-      "@type": "MedicalClinic",
-      "name": "Studio di Psicoterapia - Monte Sacro",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Via Val d'Ossola",
-        "addressLocality": "Roma",
-        "postalCode": "00141",
-        "addressCountry": "IT"
-      }
-    }
-  ],
-  "sameAs": [
-    "https://www.guidapsicologi.it/studio/dottssa-daniela-ledonne",
-    "https://www.unobravo.com/psicologi/daniela-ledonne",
-    "https://www.instagram.com/daniela_ledonne_psicologa/",
-    "https://www.facebook.com/psicodanielaledonne/",
-    "https://www.linkedin.com/in/danielaledonne/"
-  ]
-}
-```
+#### Finding 1: Contrasto testo bianco su sfondo sezioni dispari (`#e15379`)
+* **Situazione:** Nelle sezioni *Chi sono*, *Dove mi trovi* e *Seguimi*, i paragrafi di testo bianco su sfondo `#e15379` producono un rapporto di contrasto di **3.68:1**.
+* **Problema:** Lo standard WCAG 2.1 livello AA richiede un rapporto minimo di **4.5:1** per il testo normale del corpo pagina. Su schermi con luminosità ridotta o riflessi, la leggibilità risulta affaticante.
+* **Soluzione proposta:** Scurire leggermente la tonalità primaria verso un bordeaux/marsala caldo ed elegante (es. `#9e1b43` o `#96193e`, contrasto **5.5:1**) oppure un verde ottanio/salvia scuro a norma WCAG AA.
 
-### 4.2 Abilitazione `robots.txt` e Tag `canonical` (✅ Implementato)
-- In `config.toml`, rimosso `"robotsTXT"` dalla lista `disableKinds` e aggiunto `enableRobotsTXT = true`.
-- Creato `layouts/robots.txt` con inclusione esplicita del riferimento a `sitemap.xml`.
-- Aggiunto il tag `<link rel="canonical" href="{{ .Permalink }}" />` in `layouts/partials/custom_head.html`.
-
-### 4.3 Attributo Lingua `lang="it"` (✅ Implementato)
-- Verificata la configurazione `defaultContentLanguage = "it"` in `config.toml` che alimenta `<html lang="{{ site.Language.Lang }}">` in Hugo per corretta indicizzazione e screen reader.
+#### Finding 2: Colore di hover dei pulsanti dell'Hero Header e Menu laterale (`#86c440`)
+* **Situazione:** Al passaggio del mouse sui pulsanti di copertina e sulle voci del menu di scorrimento laterale (`.fn-item:hover`), il tema applica il verde lime predefinito `#86c440`.
+* **Problema:** Il contrasto del testo bianco su verde lime scende a **1.75:1** (praticamente illeggibile).
+* **Soluzione proposta:** Sostituire l'hover con una tonalità scura coordinata (es. `#22343a` o una variante più scura del colore primario) per garantire contrasto e coerenza estetica.
 
 ---
 
-## 5. UI, Design e Accessibilità (A11y - WCAG AA)
+### 3.2 UX e Ottimizzazione Conversioni
 
-### 5.1 Contrasto Colori
-- **Sfondo sezioni dispari (`#e15379`):** Il testo bianco su questo colore produce un contrasto di **3.67:1**, non conforme allo standard WCAG AA (minimo **4.5:1** per testo corpo).
-- **Hover link (`#86c440` - verde lime):** Su sfondo rosa il contrasto crolla a **1.75:1** e su sfondo chiaro a **1.83:1**, risultando quasi illeggibile al passaggio del mouse.
-- **Miglioria proposta:**
-  - Sostituire il fucsia/rosa con una tonalità più satura o profonda (es. bordeaux scuro/marsala `#9e1b43` o verde salvia/ottanio elegante) che garantisca un contrasto superiore a 5:1.
-  - Sostituire il verde lime dell'hover con un colore coordinato e leggibile.
+#### Finding 3: Gerarchia visiva dei pulsanti nell'Hero Header
+* **Situazione:** I 4 pulsanti nella schermata iniziale (*Chi sono*, *Come posso aiutarti*, *Dove mi trovi*, *Contattami*) hanno tutti la stessa identica forma e colore.
+* **Miglioria proposta:** Introdurre una **Call to Action (CTA) primaria in risalto** (es. *"Richiedi un primo colloquio"* o *"Contattami"* con pulsante pieno scuro o con icona WhatsApp/Telefono), trasformando gli altri pulsanti in navigazione secondaria (stile outline o più discreto).
 
-### 5.2 Formattazione dei Canali di Contatto (✅ Implementato)
-- Recapiti e canali esterni trasformati in eleganti **Contact Cards** e **Social Pills** monocromatiche con icone semplici e minimaliste, garantendo touch target ampio (>48px) e transizioni morbide all'hover.
-
-### 5.3 Link Esterni Sicuri (✅ Implementato)
-- Aggiunti `target="_blank" rel="noopener noreferrer"` a tutti i link verso servizi terzi (Google Maps, UnoBravo, GuidaPsicologi, Instagram, Facebook, LinkedIn, WhatsApp, Telegram).
-
-### 5.4 Gerarchia Titoli (✅ Implementato) e Layout Schede
-- In `services.md`, sostituiti i titoli `#####` (`<h5>`) con `###` (`<h3>`) per mantenere una corretta gerarchia semantica dopo il titolo di sezione `<h2>`.
-- Presentare i tre servizi (Individuale, Familiare, Coppia) con card stilizzate, angoli arrotondati e immagini coordinate, anziché come un lungo blocco di testo continuo.
+#### Finding 4: Foto profilo terapeuta (`daniela_cropped_image.webp`) (✅ Implementato)
+- Convertita la foto profilo in formato **WebP ad alta qualità** (`11 KB` invece di 67 KB, **-83.5%**).
+- Aggiunta cornice circolare morbida via CSS (`.profile-pic`) con ombra elegante e micro-hover.
+- Inseriti attributi `loading="lazy"`, `decoding="async"` e dimensioni esplicite `width="170" height="170"` per azzerare il layout shift (CLS).
+- Aggiornato il riferimento nell'oggetto Schema.org JSON-LD in `custom_head.html`.
 
 ---
 
-## 6. Privacy, Cookie e GDPR
+### 3.3 Prestazioni e Core Web Vitals (CWV)
 
-- **Tracciamento Google Analytics:** Lo script `G-DLHYE5GV19` è attualmente caricato all'apertura della pagina senza verifica del consenso preventivo né anonimizzazione dell'indirizzo IP.
-- **Informativa Privacy e Cookie:** Trattandosi di un sito professionale sanitario che raccoglie comunicazioni dirette di pazienti, è obbligatorio per legge (GDPR e linee guida del Garante per la protezione dei dati personali) fornire un link nel footer a una pagina o modale con l'**Informativa sul trattamento dei dati personali (Privacy Policy)** e sulla gestione dei cookie.
+#### Finding 5: Lazy Loading e Attributi Dimensionali (Anti-CLS)
+* **Situazione:** Le immagini dei servizi non specificano ancora gli attributi `loading="lazy"`, `decoding="async"`, `width` e `height`.
+* **Miglioria proposta:** Aggiungere `loading="lazy"` e dimensioni esplicite (`width="1200" height="800"`) sui tag `<img>` dei servizi per azzerare il *Cumulative Layout Shift* (CLS) e ottimizzare il tempo di primo rendering su mobile.
+
+#### Finding 6: Ottimizzazione Font Google e `font-display: swap`
+* **Situazione:** I font del tema sono dichiarati in `fonts.css`.
+* **Miglioria proposta:** Verificare l'inclusione della direttiva `font-display: swap` per evitare il blocco del rendering del testo durante il download dei caratteri (FOIT - Flash of Invisible Text).
 
 ---
+
+### 3.4 Privacy, Cookie e Conformità GDPR
+
+#### Finding 7: Tracciamento Google Analytics non conforme
+* **Situazione:** [`layouts/partials/analytics-gtag.html`](layouts/partials/analytics-gtag.html) carica Google Analytics 4 (`G-DLHYE5GV19`) all'apertura della pagina senza mascheramento dell'indirizzo IP né consenso preventivo.
+* **Miglioria proposta:** Abilitare `'anonymize_ip': true` nella configurazione gtag e predisporre una gestione semplificata del consenso se si utilizzano cookie analytics non aggregati.
+
+#### Finding 8: Assenza di Privacy & Cookie Policy nel footer
+* **Situazione:** Nel footer ([`layouts/partials/footer.html`](layouts/partials/footer.html)) sono presenti solo i dati fiscali (P.IVA e numero iscrizione all'Ordine), ma manca il link all'Informativa sul Trattamento dei Dati Personali (GDPR).
+* **Miglioria proposta:** Inserire nel footer un link a una pagina o modale con l'Informativa Privacy per pazienti e utenti del sito (gestione form di contatto, telefonate, WhatsApp ed email).
+
+---
+
+## 4. Tabella di Prioritizzazione Aggiornata
 
 | Priorità | Ambito | Descrizione Intervento | Impatto | Stato |
 | :---: | :--- | :--- | :---: | :---: |
-| **1** | **UX / Conversioni** | Riordinare le sezioni portando *Come posso aiutarti* subito dopo *Chi sono* | 🔴 Alto | ✅ **Completato** |
-| **2** | **Performance** | Convertire e comprimere le immagini in formato WebP (-91.4% peso) | 🔴 Alto | ✅ **Completato** |
-| **3** | **Accessibilità** | Correggere contrasti cromatici (`#e15379`, hover link) e inserire `lang="it"` | 🔴 Alto | 🟡 In corso (`lang="it"` ✅) |
-| **4** | **SEO Locale** | Inserire Schema.org JSON-LD per `MedicalBusiness` / `Psychologist` con le 2 sedi | 🔴 Alto | ✅ **Completato** |
-| **5** | **UI / Mobile** | Introdurre pulsante flottante WhatsApp e stilizzare i canali di contatto in card | 🟡 Medio | ✅ **Completato** |
-| **6** | **Legale / GDPR** | Predisporre Privacy Policy e adeguare il tracciamento di Google Analytics | 🟡 Medio | Da fare |
-| **7** | **SEO** | Abilitare `robots.txt`, tag `canonical` e gerarchia corretta dei titoli (`h3`) | 🟢 Basso | ✅ **Completato** |
+| **1** | **Accessibilità (WCAG)** | Correggere il contrasto dello sfondo rosa (`#e15379` $\rightarrow$ colore a norma >4.5:1) ed eliminare l'hover verde lime | 🔴 Alto | Da fare |
+| **2** | **UX / Conversioni** | Evidenziare la Call to Action primaria nell'Hero Header (*Richiedi un primo colloquio*) | 🔴 Alto | Da fare |
+| **3** | **Legale / GDPR** | Inserire Privacy & Cookie Policy nel footer e anonimizzare IP di Google Analytics | 🟡 Medio | Da fare |
+| **4** | **Performance (CWV)** | Aggiungere `loading="lazy"` e dimensioni esplicite `width`/`height` sulle immagini dei servizi | 🟡 Medio | Da fare |
+| **5** | **Performance** | Ottimizzare la foto profilo `daniela_cropped_image` in WebP con `font-display: swap` | 🟢 Basso | 🟡 In corso (Foto profilo WebP ✅) |
