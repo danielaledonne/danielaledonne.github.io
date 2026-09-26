@@ -6,13 +6,40 @@
     color: #22343a;
 }
 
+/* Colore primario a norma WCAG AA (#db3360 - Contrasto 4.51:1 con testo bianco) */
 .post-holder.odd {
-    background: #e15379;
+    background: #db3360;
     color: white;
 }
 
-a.btn.site-menu{
-    background: #e15379;
+.post-holder.odd .post-after {
+    border-top-color: #db3360 !important;
+}
+
+a.btn.site-menu {
+    background: #db3360;
+    color: #ffffff;
+    transition: background 0.25s ease, transform 0.2s ease;
+}
+
+a.btn.site-menu:hover,
+a.btn:hover {
+    background: #b52048;
+    color: #ffffff;
+}
+
+/* Menu laterale a comparsa / Scroll Menu */
+.fn-item.active {
+    color: #db3360 !important;
+}
+
+.fn-item:hover {
+    color: #b52048 !important;
+}
+
+/* Link di testo nei contenuti */
+.post-content a:hover {
+    color: #db3360;
 }
 
 .post-content h3 {

@@ -57,15 +57,13 @@ Le priorità attuali si concentrano su:
 
 ### 3.1 UI, Design e Accessibilità (WCAG AA)
 
-#### Finding 1: Contrasto testo bianco su sfondo sezioni dispari (`#e15379`)
-* **Situazione:** Nelle sezioni *Chi sono*, *Dove mi trovi* e *Seguimi*, i paragrafi di testo bianco su sfondo `#e15379` producono un rapporto di contrasto di **3.68:1**.
-* **Problema:** Lo standard WCAG 2.1 livello AA richiede un rapporto minimo di **4.5:1** per il testo normale del corpo pagina. Su schermi con luminosità ridotta o riflessi, la leggibilità risulta affaticante.
-* **Soluzione proposta:** Scurire leggermente la tonalità primaria verso un bordeaux/marsala caldo ed elegante (es. `#9e1b43` o `#96193e`, contrasto **5.5:1**) oppure un verde ottanio/salvia scuro a norma WCAG AA.
+#### Finding 1: Contrasto testo bianco su sfondo sezioni dispari (`#db3360`) (✅ Implementato)
+- Impostato il nuovo colore primario **`#db3360`** per le sezioni dispari (*Chi sono*, *Dove mi trovi*, *Seguimi*) e i pulsanti dell'header.
+- Rapporto di contrasto con il testo bianco portato a **`4.51:1`**, garantendo la piena conformità allo standard **WCAG 2.1 AA** e preservando l'identità visiva originale.
 
-#### Finding 2: Colore di hover dei pulsanti dell'Hero Header e Menu laterale (`#86c440`)
-* **Situazione:** Al passaggio del mouse sui pulsanti di copertina e sulle voci del menu di scorrimento laterale (`.fn-item:hover`), il tema applica il verde lime predefinito `#86c440`.
-* **Problema:** Il contrasto del testo bianco su verde lime scende a **1.75:1** (praticamente illeggibile).
-* **Soluzione proposta:** Sostituire l'hover con una tonalità scura coordinata (es. `#22343a` o una variante più scura del colore primario) per garantire contrasto e coerenza estetica.
+#### Finding 2: Eliminazione hover verde lime (`#86c440`) (✅ Implementato)
+- Sostituito l'hover default del tema con una sfumatura lampone profonda coordinata (**`#b52048`**) sui pulsanti hero (`a.btn.site-menu:hover`), sul menu di scorrimento laterale (`.fn-item:hover` / `.fn-item.active`) e sui link nei contenuti.
+- Contrasto e leggibilità garantiti su tutti gli stati interattivi.
 
 ---
 
@@ -112,7 +110,7 @@ Le priorità attuali si concentrano su:
 
 | Priorità | Ambito | Descrizione Intervento | Impatto | Stato |
 | :---: | :--- | :--- | :---: | :---: |
-| **1** | **Accessibilità (WCAG)** | Correggere il contrasto dello sfondo rosa (`#e15379` $\rightarrow$ colore a norma >4.5:1) ed eliminare l'hover verde lime | 🔴 Alto | Da fare |
+| **1** | **Accessibilità (WCAG)** | Correggere il contrasto dello sfondo rosa (`#db3360`, 4.51:1) ed eliminare l'hover verde lime | 🔴 Alto | ✅ **Completato** |
 | **2** | **UX / Conversioni** | Evidenziare la Call to Action primaria nell'Hero Header (*Richiedi un primo colloquio*) | 🔴 Alto | Da fare |
 | **3** | **Legale / GDPR** | Inserire Privacy & Cookie Policy nel footer e anonimizzare IP di Google Analytics | 🟡 Medio | Da fare |
 | **4** | **Performance (CWV)** | Aggiungere `loading="lazy"` e dimensioni esplicite `width`/`height` sulle immagini dei servizi | 🟡 Medio | ✅ **Completato** |
