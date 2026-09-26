@@ -52,4 +52,3 @@ Ecco alcuni ambiti di intervento tipici:
 
 <img src="images/couples-therapy.webp" alt="Terapia di Coppia a Roma - Dott.ssa Daniela Ledonne" class="service-img" width="1200" height="800" loading="lazy" decoding="async">
 
----
