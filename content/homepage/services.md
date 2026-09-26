@@ -20,7 +20,7 @@ Insieme affronteremo:
 - disturbi del comportamento e dell’attenzione
 - fobie
 
-![Individual Therapy](images/individual-therapy.webp)
+<img src="images/individual-therapy.webp" alt="Terapia Individuale a Roma - Dott.ssa Daniela Ledonne" class="service-img" width="1200" height="800" loading="lazy" decoding="async">
 
 ---
 
@@ -34,7 +34,7 @@ Tipici ambiti di intervento:
 - riadattamento di fronte ai cambiamenti o ad eventi critici
 - relazione con i figli in seguito alla separazione
 
-![Family Therapy](images/family-therapy.webp)
+<img src="images/family-therapy.webp" alt="Sostegno Familiare e Terapia Familiare a Roma - Dott.ssa Daniela Ledonne" class="service-img" width="1200" height="800" loading="lazy" decoding="async">
 
 ---
 
@@ -50,6 +50,6 @@ Ecco alcuni ambiti di intervento tipici:
 - sostegno alle genitorialità
 
 
-![Couples Therapy](images/couples-therapy.webp)
+<img src="images/couples-therapy.webp" alt="Terapia di Coppia a Roma - Dott.ssa Daniela Ledonne" class="service-img" width="1200" height="800" loading="lazy" decoding="async">
 
 ---

@@ -85,9 +85,10 @@ Le priorità attuali si concentrano su:
 
 ### 3.3 Prestazioni e Core Web Vitals (CWV)
 
-#### Finding 5: Lazy Loading e Attributi Dimensionali (Anti-CLS)
-* **Situazione:** Le immagini dei servizi non specificano ancora gli attributi `loading="lazy"`, `decoding="async"`, `width` e `height`.
-* **Miglioria proposta:** Aggiungere `loading="lazy"` e dimensioni esplicite (`width="1200" height="800"`) sui tag `<img>` dei servizi per azzerare il *Cumulative Layout Shift* (CLS) e ottimizzare il tempo di primo rendering su mobile.
+#### Finding 5: Lazy Loading e Attributi Dimensionali (Anti-CLS) (✅ Implementato)
+- Aggiunti attributi `loading="lazy"` e `decoding="async"` su tutte le immagini dei servizi per posticipare il caricamento al momento dello scorrimento.
+- Definite dimensioni native esplicite `width="1200" height="800"` con classe `.service-img` (`aspect-ratio: 3 / 2`, `height: auto`, angoli arrotondati a 12px e ombra leggera), azzerando completamente il *Cumulative Layout Shift* (CLS).
+- Inseriti attributi `alt` descrittivi ricchi di parole chiave per la SEO locale.
 
 #### Finding 6: Ottimizzazione Font Google e `font-display: swap`
 * **Situazione:** I font del tema sono dichiarati in `fonts.css`.
@@ -114,5 +115,5 @@ Le priorità attuali si concentrano su:
 | **1** | **Accessibilità (WCAG)** | Correggere il contrasto dello sfondo rosa (`#e15379` $\rightarrow$ colore a norma >4.5:1) ed eliminare l'hover verde lime | 🔴 Alto | Da fare |
 | **2** | **UX / Conversioni** | Evidenziare la Call to Action primaria nell'Hero Header (*Richiedi un primo colloquio*) | 🔴 Alto | Da fare |
 | **3** | **Legale / GDPR** | Inserire Privacy & Cookie Policy nel footer e anonimizzare IP di Google Analytics | 🟡 Medio | Da fare |
-| **4** | **Performance (CWV)** | Aggiungere `loading="lazy"` e dimensioni esplicite `width`/`height` sulle immagini dei servizi | 🟡 Medio | Da fare |
+| **4** | **Performance (CWV)** | Aggiungere `loading="lazy"` e dimensioni esplicite `width`/`height` sulle immagini dei servizi | 🟡 Medio | ✅ **Completato** |
 | **5** | **Performance** | Ottimizzare la foto profilo `daniela_cropped_image` in WebP con `font-display: swap` | 🟢 Basso | 🟡 In corso (Foto profilo WebP ✅) |
