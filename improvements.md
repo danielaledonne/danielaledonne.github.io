@@ -61,9 +61,11 @@ Attualmente la sola pagina iniziale carica oltre 3.2 MB di immagini in formato J
 
 **Miglioria proposta:**
 1. Convertire tutte le immagini in formato moderno **WebP** o **AVIF** con compressione bilanciata:
-   - `cover-image.webp`: riducibile a **~100–140 KB** (-90%).
-   - Immagini dei servizi: riducibili a **~35–50 KB** ciascuna (-93%).
-   - Peso totale delle immagini: da ~3.2 MB a **meno di 300 KB**.
+   - `cover-image.webp`: **40 KB** invece di 1.5 MB (-97.3%) — ✅ **Completato**
+   - `individual-therapy.webp`: **96 KB** invece di 356 KB (nuova composizione personalizzata) — ✅ **Completato**
+   - `family-therapy.webp`: **64 KB** invece di 642 KB (-90%, nuova composizione personalizzata) — ✅ **Completato**
+   - `couples-therapy.webp`: **74 KB** invece di 692 KB (-89.3%, nuova composizione personalizzata) — ✅ **Completato**
+   - **Peso totale delle 4 immagini principali:** ridotto da **3.19 MB** a **274 KB** (**-91.4% complessivo**!).
 2. Aggiungere gli attributi `loading="lazy"` e `decoding="async"` a tutte le immagini sotto la piega iniziale (servizi e foto profilo).
 3. Specificare `width` e `height` su ogni tag `<img>` per azzerare il *Cumulative Layout Shift* (CLS).
 
@@ -166,7 +168,7 @@ Per uno psicologo con studio a Roma, i dati strutturati sono fondamentali per co
 | Priorità | Ambito | Descrizione Intervento | Impatto | Stato |
 | :---: | :--- | :--- | :---: | :---: |
 | **1** | **UX / Conversioni** | Riordinare le sezioni portando *Come posso aiutarti* subito dopo *Chi sono* | 🔴 Alto | ✅ **Completato** |
-| **2** | **Performance** | Convertire e comprimere le immagini in formato WebP (-85% peso) | 🔴 Alto | Da fare |
+| **2** | **Performance** | Convertire e comprimere le immagini in formato WebP (-91.4% peso) | 🔴 Alto | ✅ **Completato** |
 | **3** | **Accessibilità** | Correggere contrasti cromatici (`#e15379`, hover link) e inserire `lang="it"` | 🔴 Alto | 🟡 In corso (`lang="it"` ✅) |
 | **4** | **SEO Locale** | Inserire Schema.org JSON-LD per `MedicalBusiness` / `Psychologist` con le 2 sedi | 🔴 Alto | ✅ **Completato** |
 | **5** | **UI / Mobile** | Introdurre pulsante flottante WhatsApp e stilizzare i canali di contatto in card | 🟡 Medio | ✅ **Completato** |
