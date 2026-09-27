@@ -131,7 +131,7 @@ var $sitehead = $("#site-head");
   });
 })(jQuery);
 
-// Tracciamento Conversioni e Click di Contatto (Google Analytics 4)
+// Tracciamento Conversioni, Contatti e Social (Google Analytics 4)
 document.addEventListener('click', function (e) {
   var link = e.target.closest('a');
   if (!link || !link.href) return;
@@ -139,7 +139,14 @@ document.addEventListener('click', function (e) {
   var href = link.href;
   var eventName = null;
   var channel = null;
-  var placement = link.classList.contains('whatsapp-float') ? 'floating_button' : 'contact_section';
+  var category = 'Contact';
+  var placement = 'contact_section';
+
+  if (link.classList.contains('whatsapp-float')) {
+    placement = 'floating_button';
+  } else if (link.classList.contains('social-pill')) {
+    placement = 'social_section';
+  }
 
   if (href.indexOf('wa.me') !== -1) {
     eventName = 'whatsapp_click';
@@ -153,14 +160,27 @@ document.addEventListener('click', function (e) {
   } else if (href.indexOf('t.me') !== -1) {
     eventName = 'telegram_click';
     channel = 'telegram';
+  } else if (href.indexOf('instagram.com') !== -1) {
+    eventName = 'instagram_click';
+    channel = 'instagram';
+    category = 'Social';
+  } else if (href.indexOf('facebook.com') !== -1) {
+    eventName = 'facebook_click';
+    channel = 'facebook';
+    category = 'Social';
+  } else if (href.indexOf('linkedin.com') !== -1) {
+    eventName = 'linkedin_click';
+    channel = 'linkedin';
+    category = 'Social';
   }
 
   if (eventName && typeof window.gtag === 'function') {
     window.gtag('event', eventName, {
-      'event_category': 'Contact',
+      'event_category': category,
       'channel': channel,
       'placement': placement,
       'link_url': href
     });
   }
 });
+
