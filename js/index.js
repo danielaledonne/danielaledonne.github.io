@@ -174,8 +174,9 @@ document.addEventListener('click', function (e) {
     category = 'Social';
   }
 
-  if (eventName && typeof window.gtag === 'function') {
-    window.gtag('event', eventName, {
+  var sendGtag = typeof window.gtag === 'function' ? window.gtag : (typeof gtag === 'function' ? gtag : null);
+  if (eventName && sendGtag) {
+    sendGtag('event', eventName, {
       'event_category': category,
       'channel': channel,
       'placement': placement,
@@ -183,4 +184,53 @@ document.addEventListener('click', function (e) {
     });
   }
 });
+
+// Tracciamento Visualizzazione Sezioni (Google Analytics 4 - section_view)
+(function () {
+  if (!('IntersectionObserver' in window)) return;
+
+  var viewedSections = new Set();
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        var section = entry.target;
+        var sectionId = section.id || section.getAttribute('id');
+        var titleEl = section.querySelector('.post-title');
+        var sectionTitle = titleEl ? titleEl.textContent.trim() : (sectionId === 'site-head' ? 'Home / Header' : sectionId);
+
+        if (sectionId && !viewedSections.has(sectionId)) {
+          viewedSections.add(sectionId);
+          window.__sectionEvents = window.__sectionEvents || [];
+          window.__sectionEvents.push({ section_id: sectionId, section_title: sectionTitle });
+
+          var sendGtag = typeof window.gtag === 'function' ? window.gtag : (typeof gtag === 'function' ? gtag : null);
+          if (sendGtag) {
+            sendGtag('event', 'section_view', {
+              'event_category': 'Engagement',
+              'section_id': sectionId,
+              'section_title': sectionTitle
+            });
+          }
+        }
+      }
+    });
+  }, {
+    threshold: 0.2 // Scatta quando almeno il 20% della sezione entra nella visuale
+  });
+
+  function initSectionObserver() {
+    var sections = document.querySelectorAll('.post-holder article.post');
+    sections.forEach(function (sec) {
+      observer.observe(sec);
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSectionObserver);
+  } else {
+    initSectionObserver();
+  }
+})();
+
 
